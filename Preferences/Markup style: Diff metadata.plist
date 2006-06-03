@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Style: Diff metadata</string>
+	<string>Style: Index</string>
 	<key>scope</key>
-	<string>meta.diff</string>
+	<string>meta.diff.index</string>
 	<key>settings</key>
 	<dict>
 		<key>background</key>
