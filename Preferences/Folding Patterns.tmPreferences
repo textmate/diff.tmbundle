@@ -9,9 +9,9 @@
 	<key>settings</key>
 	<dict>
 		<key>foldingIndentedBlockIgnore</key>
-		<string>^[-+! ]</string>
+		<string>^[-+!&lt;&gt; ]</string>
 		<key>foldingIndentedBlockStart</key>
-		<string>^@@ </string>
+		<string>^(@@ |\d+[acd]\d+|diff )</string>
 	</dict>
 	<key>uuid</key>
 	<string>9B46F71B-3813-4F2E-AD9C-D4C6FAAFC169</string>
