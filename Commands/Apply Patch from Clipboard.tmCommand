@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>export PATCH_GET=0
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+export PATCH_GET=0
 export __CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100
 
 if [[ -z $TM_FILEPATH ]]
@@ -20,13 +23,23 @@ rescan_project
 	<string>none</string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^@D</string>
 	<key>name</key>
 	<string>Apply Patch From Clipboard to Current Document</string>
-	<key>output</key>
-	<string>showAsTooltip</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>semanticClass</key>
+	<string>diff.files</string>
 	<key>uuid</key>
 	<string>46842464-574C-477F-9DFB-BB38EA3C85BE</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

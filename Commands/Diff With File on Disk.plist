@@ -5,7 +5,10 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>if [[ ! -e "$TM_FILEPATH" ]]; then
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+if [[ ! -e "$TM_FILEPATH" ]]; then
   exit_show_tool_tip "There is no file on disk"
 fi
 
@@ -15,13 +18,23 @@ fi
 </string>
 	<key>input</key>
 	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^@D</string>
 	<key>name</key>
 	<string>Document With Saved Copy</string>
-	<key>output</key>
-	<string>openAsNewDocument</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>semanticClass</key>
+	<string>diff.document</string>
 	<key>uuid</key>
 	<string>0979659D-126E-467F-AC07-599979A42D67</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

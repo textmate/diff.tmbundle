@@ -5,7 +5,10 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string># set defaultCStringEncoding to UTF-8
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+# set defaultCStringEncoding to UTF-8
 if diff --strip-trailing-cr --label "${TM_FILENAME:-untitled}" --label "(clipboard)" -u - &lt;(__CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100 pbpaste); then
   echo "There are no differences."
 else
@@ -14,13 +17,23 @@ fi
 </string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^@D</string>
 	<key>name</key>
 	<string>Document / Selection With Clipboard</string>
-	<key>output</key>
-	<string>showAsTooltip</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>semanticClass</key>
+	<string>diff.document</string>
 	<key>uuid</key>
 	<string>674E54F5-065E-4224-9626-673903B7C0E0</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

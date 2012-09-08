@@ -5,7 +5,10 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>file=$(osascript &lt;&lt;"APPLESCRIPT"
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+file=$(osascript &lt;&lt;"APPLESCRIPT"
 tell app "TextMate"
   try
     set theFile to choose file
@@ -24,13 +27,23 @@ fi
 </string>
 	<key>input</key>
 	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^@D</string>
 	<key>name</key>
 	<string>Document With Arbitrary File…</string>
-	<key>output</key>
-	<string>openAsNewDocument</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>semanticClass</key>
+	<string>diff.document</string>
 	<key>uuid</key>
 	<string>4050A252-C604-4D0C-8545-E50B22E2715B</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

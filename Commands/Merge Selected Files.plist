@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>require_cmd opendiff "Opendiff comes with Apple's developer tools."
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+require_cmd opendiff "Opendiff comes with Apple's developer tools."
 
 # set utf-8 as the default encoding (used by opendiff)
 export __CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100
@@ -18,13 +21,23 @@ fi
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^@D</string>
 	<key>name</key>
 	<string>Merge Selected Files…</string>
-	<key>output</key>
-	<string>showAsTooltip</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
+	<key>semanticClass</key>
+	<string>diff.files</string>
 	<key>uuid</key>
 	<string>239E196A-7106-4DC9-8FAE-0A9CA7540AFA</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>

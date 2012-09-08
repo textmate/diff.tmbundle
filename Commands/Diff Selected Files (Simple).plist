@@ -5,7 +5,10 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>eval arr=("$TM_SELECTED_FILES")
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+eval arr=("$TM_SELECTED_FILES")
 if [[ ${#arr[@]} != 2 ]]; then
    exit_show_tool_tip $'You need to select exactly two\nfiles in the project drawer.'
 fi
@@ -16,13 +19,23 @@ fi
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^@D</string>
 	<key>name</key>
 	<string>Selected Files in Project Drawer</string>
-	<key>output</key>
-	<string>openAsNewDocument</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>semanticClass</key>
+	<string>diff.files</string>
 	<key>uuid</key>
 	<string>D04AFBD3-8110-11D9-8E5B-0011242E4184</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
