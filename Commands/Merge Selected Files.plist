@@ -8,14 +8,12 @@
 	<string>#!/usr/bin/env bash
 [[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
 
-require_cmd opendiff "Opendiff comes with Apple's developer tools."
-
 # set utf-8 as the default encoding (used by opendiff)
 export __CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100
 
 eval arr=("$TM_SELECTED_FILES")
 if [[ ${#arr[@]} == 2 ]];
-   then opendiff "${arr[0]}" "${arr[1]}"; rescan_project
+   then ${TM_OPENDIFF:-opendiff} "${arr[0]}" "${arr[1]}"; rescan_project
    else echo -e "You need to select exactly two\nfiles in the project drawer."
 fi
 </string>
@@ -33,6 +31,19 @@ fi
 	<string>text</string>
 	<key>outputLocation</key>
 	<string>toolTip</string>
+    <key>requiredCommands</key>
+    <array>
+    	<dict>
+    		<key>command</key>
+    		<string>opendiff</string>
+    		<key>locations</key>
+    		<array>
+    			<string>/usr/bin/opendiff</string>
+    		</array>
+    		<key>variable</key>
+    		<string>TM_OPENDIFF</string>
+    	</dict>
+    </array>
 	<key>semanticClass</key>
 	<string>diff.files</string>
 	<key>uuid</key>
