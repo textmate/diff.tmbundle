@@ -98,6 +98,12 @@
 			<string>meta.diff.range.context</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>^diff --git a/.*$\n?</string>
+			<key>name</key>
+			<string>meta.diff.header.git</string>
+		</dict>
+		<dict>
 			<key>captures</key>
 			<dict>
 				<key>4</key>
@@ -196,6 +202,12 @@
 			<string>^(((&lt;)( .*)?)|((-).*))$\n?</string>
 			<key>name</key>
 			<string>markup.deleted.diff</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^index [0-9a-f]{7}\.\.[0-9a-f]{7}.*$\n?</string>
+			<key>name</key>
+			<string>meta.diff.index.git</string>
 		</dict>
 		<dict>
 			<key>captures</key>
