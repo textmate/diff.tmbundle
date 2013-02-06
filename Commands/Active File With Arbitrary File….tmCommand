@@ -21,7 +21,7 @@ APPLESCRIPT)
 
 if [[ "$file" == "" ]]; then exit_discard; fi
 
-if diff --strip-trailing-cr --label "$file" --label "${TM_FILENAME:-untitled}" -u "$file" -; then
+if diff --strip-trailing-cr --label "$file" --label "${TM_DISPLAYNAME}" -u "$file" -; then
   exit_show_tool_tip "There are no differences."
 fi
 </string>

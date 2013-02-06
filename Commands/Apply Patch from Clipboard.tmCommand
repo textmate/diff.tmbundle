@@ -15,9 +15,6 @@ if [[ -z $TM_FILEPATH ]]
   then exit_discard
   else pbpaste | patch "$TM_FILEPATH" -p0
 fi
-
-# Reload patched file
-rescan_project
 </string>
 	<key>fallbackInput</key>
 	<string>none</string>
