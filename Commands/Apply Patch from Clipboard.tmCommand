@@ -9,7 +9,6 @@
 [[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
 
 export PATCH_GET=0
-export __CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100
 
 if [[ -z $TM_FILEPATH ]]
   then exit_discard

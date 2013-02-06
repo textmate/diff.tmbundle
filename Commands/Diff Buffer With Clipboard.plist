@@ -8,8 +8,7 @@
 	<string>#!/usr/bin/env bash
 [[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
 
-# set defaultCStringEncoding to UTF-8
-if diff --strip-trailing-cr --label "${TM_DISPLAYNAME}" --label "(clipboard)" -u - &lt;(__CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100 pbpaste); then
+if diff --strip-trailing-cr --label "${TM_DISPLAYNAME}" --label "(clipboard)" -u - &lt;(pbpaste); then
   echo "There are no differences."
 else
   exit_create_new_document

@@ -8,9 +8,6 @@
 	<string>#!/usr/bin/env bash
 [[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
 
-# set utf-8 as the default encoding (used by opendiff)
-export __CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100
-
 eval arr=("$TM_SELECTED_FILES")
 if [[ ${#arr[@]} == 2 ]];
    then ${TM_OPENDIFF:-opendiff} "${arr[0]}" "${arr[1]}"
