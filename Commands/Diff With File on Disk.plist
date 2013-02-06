@@ -12,7 +12,7 @@ if [[ ! -e "$TM_FILEPATH" ]]; then
   exit_show_tool_tip "There is no file on disk"
 fi
 
-if diff --strip-trailing-cr --label "$TM_FILENAME (saved version)" --label "(current document)" -u &lt;(cat "$TM_FILEPATH" | tr -d '\r') -; then
+if diff --strip-trailing-cr --label "$TM_FILENAME (saved version)" --label "(current document)" -u "$TM_FILEPATH" -; then
   exit_show_tool_tip "There are no differences."
 fi
 </string>
