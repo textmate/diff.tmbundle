@@ -6,6 +6,7 @@
 	<array>
 		<string>diff</string>
 		<string>patch</string>
+		<string>rej</string>
 	</array>
 	<key>firstLineMatch</key>
 	<string>(?x)^
