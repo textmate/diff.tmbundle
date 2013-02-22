@@ -206,7 +206,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>^index [0-9a-f]{7}\.\.[0-9a-f]{7}.*$\n?</string>
+			<string>^index [0-9a-f]{7,40}\.\.[0-9a-f]{7,40}.*$\n?</string>
 			<key>name</key>
 			<string>meta.diff.index.git</string>
 		</dict>
