@@ -105,6 +105,12 @@
 			<string>meta.diff.header.git</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>^diff (-|\S+\s+\S+).*$\n?</string>
+			<key>name</key>
+			<string>meta.diff.header.command</string>
+		</dict>
+		<dict>
 			<key>captures</key>
 			<dict>
 				<key>4</key>
@@ -228,6 +234,12 @@
 			<string>^Index(:) (.+)$\n?</string>
 			<key>name</key>
 			<string>meta.diff.index</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^Only in .*: .*$\n?</string>
+			<key>name</key>
+			<string>meta.diff.only-in</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
