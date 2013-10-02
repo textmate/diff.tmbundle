@@ -4,8 +4,8 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>diff</string>
 		<string>patch</string>
+		<string>diff</string>
 		<string>rej</string>
 	</array>
 	<key>firstLineMatch</key>
