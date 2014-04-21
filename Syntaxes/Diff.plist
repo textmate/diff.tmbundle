@@ -211,6 +211,24 @@
 			<string>markup.deleted.diff</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>^(#)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.diff</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Git produces unified diffs with embedded comments"</string>
+			<key>end</key>
+			<string>\n</string>
+			<key>name</key>
+			<string>comment.line.number-sign.diff</string>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>^index [0-9a-f]{7,40}\.\.[0-9a-f]{7,40}.*$\n?</string>
 			<key>name</key>
