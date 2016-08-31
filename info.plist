@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>contactEmailRot13</key>
@@ -24,9 +24,25 @@
 			<string>B9091553-4317-415E-B381-4609BD453E01</string>
 			<string>------------------------------------</string>
 			<string>54D1CEF2-10AB-407B-AAB2-6AEA06B297B1</string>
+			<string>46842464-574C-477F-9DFB-BB38EA3C85BE</string>
+			<string>------------------------------------</string>
+			<string>5AC09B51-F282-4A3B-891F-2B818FECC96D</string>
 		</array>
 		<key>submenus</key>
-		<dict/>
+		<dict>
+			<key>5AC09B51-F282-4A3B-891F-2B818FECC96D</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>7494B11B-2A67-4BAD-B652-40205D354423</string>
+					<string>------------------------------------</string>
+					<string>2A82E9A1-A70E-4268-86DF-A20C12D2FA01</string>
+					<string>792B95BE-0CD5-4AC1-854A-901E7DD5AA30</string>
+				</array>
+				<key>name</key>
+				<string>Merge Conflicts</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>name</key>
 	<string>Diff</string>

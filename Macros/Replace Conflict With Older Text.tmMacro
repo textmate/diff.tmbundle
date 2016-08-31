@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>action</key>
+				<string>findNext</string>
+				<key>findString</key>
+				<string>(?m:&lt;&lt;&lt;&lt;&lt;&lt;&lt;[^\n]*?\n(.*?\n?)=======\n(.*?\n?)&gt;&gt;&gt;&gt;&gt;&gt;&gt;([^\n]*)\n)</string>
+				<key>regularExpression</key>
+				<true/>
+				<key>wrapAround</key>
+				<true/>
+			</dict>
+			<key>command</key>
+			<string>findWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>action</key>
+				<string>replace</string>
+				<key>findString</key>
+				<string>(?m:&lt;&lt;&lt;&lt;&lt;&lt;&lt;[^\n]*?\n(.*?\n?)=======\n(.*?\n?)&gt;&gt;&gt;&gt;&gt;&gt;&gt;([^\n]*)\n)</string>
+				<key>regularExpression</key>
+				<true/>
+				<key>replaceAllScope</key>
+				<string>document</string>
+				<key>replaceString</key>
+				<string>$1</string>
+				<key>wrapAround</key>
+				<true/>
+			</dict>
+			<key>command</key>
+			<string>findWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>^{</string>
+	<key>name</key>
+	<string>Replace Conflict With Older Text</string>
+	<key>scope</key>
+	<string>attr.scm.status.conflicted,</string>
+	<key>scopeType</key>
+	<string>local</string>
+	<key>uuid</key>
+	<string>2A82E9A1-A70E-4268-86DF-A20C12D2FA01</string>
+</dict>
+</plist>
